@@ -66,7 +66,16 @@ notification:
   # 🔴 Consequences of exposure:
   #    - Minor: Spam notifications flooding your devices
   #    - Severe: Webhook abuse leading to security incidents (malicious messages, phishing links, etc.)
-  #
+  # 个人微信
+  # 详见 https://www.pushplus.plus/
+  pushplus:
+    enable: true # 是否启用
+    token: "" # 在 pushplus 官网获取
+    topic: "" # 群组编码，不填则发送给自己
+    channel: "wechat" # 发送渠道, wechat:微信, webhook:webhook, cp:企业微信, mail:邮件, sms:短信
+    webhook: "" # webhook编码
+    callbackUrl: "" # 回调地址
+    template: "markdown" # 消息模板
   webhooks:
     feishu_url: "" # 飞书机器人的 webhook URL
     dingtalk_url: "" # 钉钉机器人的 webhook URL
